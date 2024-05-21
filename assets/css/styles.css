@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  /* outline: 1px dashed red; */
+  outline: 1px dashed pink;
 }
 
 root {
@@ -18,7 +18,119 @@ root {
 }
 
 body {
-  font-family: young-serif, serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
+  background-color: rgb(243, 229, 216);
+}
+
+main.card {
+  max-width: 736px;
+  margin: 0 auto;
+  padding: 4rem;
+
+  border: none;
+  border-radius: 2.4rem;
+  background-color: hsl(0, 0%, 100%);
+
+  font-family: 'Outfit', sans-serif;
+
+  img {
+    max-width: 656px;
+  }
+
+  div.content {
+    width: 100%;
+    margin-top: 4rem;
+
+    h1,
+    h2 {
+      font-family: 'Young Serif', serif;
+    }
+
+    h2,
+    h3 {
+      color: hsl(332, 51%, 32%);
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p,
+    li,
+    strong {
+      font-size: 1.6rem;
+      color: hsl(30, 10%, 34%);
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    li {
+      margin: 1rem 2rem;
+      /* color: hsl(332, 51%, 32%); */
+    }
+
+    li::marker {
+      color: hsl(332, 51%, 32%);
+    }
+
+    /* ol {
+      list-style-type: decimal;
+      color: hsl(332, 51%, 32%);
+    } */
+
+    ol {
+      list-style: none;
+      counter-reset: li;
+
+      li::before {
+        content: counter(li);
+        color: red;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+
+      li {
+        counter-increment: li;
+      }
+    }
+
+    .intro {
+      margin-top: 2rem;
+    }
+
+    .prep-time {
+      margin-top: 2rem;
+    }
+
+    .ingredients {
+      margin-top: 2rem;
+    }
+
+    .instructions {
+      margin-top: 2rem;
+    }
+
+    .nutrition {
+      margin-top: 2rem;
+    }
+  }
+}
+
+footer.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }
